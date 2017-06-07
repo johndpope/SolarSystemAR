@@ -9,7 +9,30 @@
 import UIKit
 import SceneKit
 
-class Planet: SolarObject {
+
+
+class Planet: SCNNode {
+    var planetName: String
+    var imageMap: UIImage
+    var radius: CGFloat
+    var distanceFromCamera: Double
+    
+    init(planetName: String, image: UIImage, radius: CGFloat, distanceFromCamera: Double) {
+        self.planetName = planetName
+        self.imageMap = image
+        self.radius = radius
+        self.distanceFromCamera = -distanceFromCamera
+        super.init()
+        let sphere = SCNSphere(radius: radius)
+        sphere.firstMaterial!.diffuse.contents = self.imageMap
+        self.geometry = sphere
+        self.position = SCNVector3Make(0, 0, Float(-distanceFromCamera))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     //Given a time interval, animate the planet's rotation around the sun (in a circle)
     private func createAction(duration: TimeInterval) -> SCNAction {
@@ -27,6 +50,6 @@ class Planet: SolarObject {
     
     //Call the create action function on the node that then execute the action
     func animate(withTime: TimeInterval){
-        node.runAction(createAction(duration: withTime))
+        self.runAction(createAction(duration: withTime))
     }
 }
