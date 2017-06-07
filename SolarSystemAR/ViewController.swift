@@ -11,7 +11,7 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sphere.firstMaterial!.isDoubleSided = true
         sceneView.scene.rootNode.addChildNode(SCNNode(geometry: sphere))
         for planet in allPlanets{
-            sceneView.scene.rootNode.addChildNode(planet.node)
+            sceneView.scene.rootNode.addChildNode(planet)
         }
     }
     
