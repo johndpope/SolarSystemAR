@@ -11,10 +11,6 @@
 		69A797E01EE8610600F0A6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A797DE1EE8610600F0A6EA /* Main.storyboard */; };
 		69A797E21EE8610600F0A6EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A797E11EE8610600F0A6EA /* Assets.xcassets */; };
 		69A797E51EE8610600F0A6EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A797E31EE8610600F0A6EA /* LaunchScreen.storyboard */; };
-		69A797F01EE8612000F0A6EA /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A797EC1EE8612000F0A6EA /* Planet.swift */; };
-		69A797F11EE8612000F0A6EA /* SolarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A797ED1EE8612000F0A6EA /* SolarObject.swift */; };
-		69A797F21EE8612000F0A6EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A797EE1EE8612000F0A6EA /* ViewController.swift */; };
-		69A797F31EE8612000F0A6EA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A797EF1EE8612000F0A6EA /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +20,10 @@
 		69A797E11EE8610600F0A6EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69A797E41EE8610600F0A6EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69A797E61EE8610600F0A6EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69A797EC1EE8612000F0A6EA /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Planet.swift; path = ../../blah/SolarSystemAR/SolarSystemAR/SolarSystemAR/Planet.swift; sourceTree = "<group>"; };
-		69A797ED1EE8612000F0A6EA /* SolarObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SolarObject.swift; path = ../../blah/SolarSystemAR/SolarSystemAR/SolarSystemAR/SolarObject.swift; sourceTree = "<group>"; };
-		69A797EE1EE8612000F0A6EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../blah/SolarSystemAR/SolarSystemAR/SolarSystemAR/ViewController.swift; sourceTree = "<group>"; };
-		69A797EF1EE8612000F0A6EA /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../../blah/SolarSystemAR/SolarSystemAR/SolarSystemAR/Data.swift; sourceTree = "<group>"; };
+		69C0D7371EE862DC002745F3 /* SolarObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarObject.swift; sourceTree = "<group>"; };
+		69C0D7381EE862DC002745F3 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		69C0D7391EE862DC002745F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69C0D73A1EE862DC002745F3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +57,10 @@
 			isa = PBXGroup;
 			children = (
 				69A797D81EE8610600F0A6EA /* AppDelegate.swift */,
-				69A797EF1EE8612000F0A6EA /* Data.swift */,
-				69A797EE1EE8612000F0A6EA /* ViewController.swift */,
-				69A797ED1EE8612000F0A6EA /* SolarObject.swift */,
-				69A797EC1EE8612000F0A6EA /* Planet.swift */,
+				69C0D73A1EE862DC002745F3 /* Data.swift */,
+				69C0D7381EE862DC002745F3 /* Planet.swift */,
+				69C0D7371EE862DC002745F3 /* SolarObject.swift */,
+				69C0D7391EE862DC002745F3 /* ViewController.swift */,
 				69A797DE1EE8610600F0A6EA /* Main.storyboard */,
 				69A797E11EE8610600F0A6EA /* Assets.xcassets */,
 				69A797E31EE8610600F0A6EA /* LaunchScreen.storyboard */,
@@ -144,11 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69A797F11EE8612000F0A6EA /* SolarObject.swift in Sources */,
-				69A797F31EE8612000F0A6EA /* Data.swift in Sources */,
 				69A797D91EE8610600F0A6EA /* AppDelegate.swift in Sources */,
-				69A797F21EE8612000F0A6EA /* ViewController.swift in Sources */,
-				69A797F01EE8612000F0A6EA /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +316,7 @@
 				69A797EB1EE8610600F0A6EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
