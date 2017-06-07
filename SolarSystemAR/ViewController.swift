@@ -13,6 +13,7 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
+    var isRotating = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene()
         sceneView.scene = scene
         addPlanets()
-        //rotate()
+        rotate()
     }
     
     func addPlanets(){
@@ -32,10 +33,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(SCNNode(geometry: sphere))
         for planet in allPlanets{
             sceneView.scene.rootNode.addChildNode(planet)
+            sceneView.scene.rootNode.addChildNode(planet.createPath())
         }
     }
     
     func rotate(){
+        isRotating = true
         mercury.animate(withTime: 60)
         venus.animate(withTime: 100)
         earth.animate(withTime: 150)
@@ -50,5 +53,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingSessionConfiguration()
         sceneView.session.run(configuration)
+    }
+    @IBAction func stopRotate(_ sender: Any) {
+        if isRotating {
+            for planet in allPlanets {
+               planet.removeAllActions()
+            }
+            isRotating = false
+        } else {
+            rotate()
+        }
     }
 }
