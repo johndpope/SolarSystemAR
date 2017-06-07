@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		694028AB1EE8783E004ABFE0 /* Billboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billboard.swift; sourceTree = "<group>"; };
 		69A797D51EE8610600F0A6EA /* SolarSystemAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarSystemAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A797D81EE8610600F0A6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69A797DF1EE8610600F0A6EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 				69C0D7381EE862DC002745F3 /* Planet.swift */,
 				69C0D7391EE862DC002745F3 /* ViewController.swift */,
 				69A797DE1EE8610600F0A6EA /* Main.storyboard */,
+				694028AB1EE8783E004ABFE0 /* Billboard.swift */,
 				69A797E11EE8610600F0A6EA /* Assets.xcassets */,
 				69A797E31EE8610600F0A6EA /* LaunchScreen.storyboard */,
 				69A797E61EE8610600F0A6EA /* Info.plist */,

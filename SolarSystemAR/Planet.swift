@@ -9,8 +9,6 @@
 import UIKit
 import SceneKit
 
-
-
 class Planet: SCNNode {
     var planetName: String
     var imageMap: UIImage
@@ -47,15 +45,23 @@ class Planet: SCNNode {
         while theta < 2*Double.pi {
             let newX = cos(theta) * distanceFromCamera
             let newY = sin(theta) * distanceFromCamera
-            arrayOfMoves.append(SCNAction.move(to: (SCNVector3Make(Float(newX), 0, Float(newY))), duration: duration))
+            arrayOfMoves.append(SCNAction.move(to: (SCNVector3Make(Float(newX), 0, Float(newY))), duration: duration/600))
             theta += 0.1
         }
-        
         return SCNAction.repeatForever(SCNAction.sequence(arrayOfMoves))
     }
     
     //Call the create action function on the node that then execute the action
     func animate(withTime: TimeInterval){
         self.runAction(createAction(duration: withTime))
+    }
+    
+    func createPath() -> SCNNode {
+        let torus = SCNTorus(ringRadius: CGFloat(-distanceFromCamera), pipeRadius: 0.005)
+        let torusNode = SCNNode(geometry: torus)
+        torusNode.opacity = 1
+        torus.firstMaterial?.diffuse.contents  = UIColor.red
+        torusNode.position = SCNVector3Make(0, 0, 0)
+        return torusNode
     }
 }
