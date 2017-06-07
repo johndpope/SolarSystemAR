@@ -13,14 +13,18 @@ class Billboard: SCNNode {
     
     private var text: String!
     
-    convenience init(text: String, planet: Planet) {
+    convenience init(text: String, cameraNode: SCNNode) {
         
         self.init()
         
         self.text = text
-        self.constraints!.append(SCNBillboardConstraint())
+        self.constraints = [SCNLookAtConstraint(target: cameraNode)]
         
-        let textNode = SCNText(string: text, extrusionDepth: 0)
+        
+        let textNode = SCNText(string: text, extrusionDepth: 0.1)
+        textNode.alignmentMode = kCAAlignmentCenter
+        textNode.font = UIFont (name: "Arial", size: 0.1)
+        
         self.geometry = textNode
         
     }
