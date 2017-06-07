@@ -33,6 +33,12 @@ class Planet: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func createBillboard(cameraNode: SCNNode) {
+        let billboard = Billboard(text: "Hello", cameraNode: cameraNode)
+        billboard.position.y = 0.01
+        self.addChildNode(billboard)
+    }
+    
     
     //Given a time interval, animate the planet's rotation around the sun (in a circle)
     private func createAction(duration: TimeInterval) -> SCNAction {
