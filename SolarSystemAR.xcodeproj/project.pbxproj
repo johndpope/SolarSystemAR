@@ -14,6 +14,7 @@
 		69A797E01EE8610600F0A6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A797DE1EE8610600F0A6EA /* Main.storyboard */; };
 		69A797E21EE8610600F0A6EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A797E11EE8610600F0A6EA /* Assets.xcassets */; };
 		69A797E51EE8610600F0A6EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A797E31EE8610600F0A6EA /* LaunchScreen.storyboard */; };
+		69D9A5341EE88B8800328AB8 /* Billboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694028AB1EE8783E004ABFE0 /* Billboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +148,7 @@
 				694028A81EE8646D004ABFE0 /* Data.swift in Sources */,
 				69A797D91EE8610600F0A6EA /* AppDelegate.swift in Sources */,
 				694028A91EE86470004ABFE0 /* Planet.swift in Sources */,
+				69D9A5341EE88B8800328AB8 /* Billboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +194,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -247,6 +251,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;

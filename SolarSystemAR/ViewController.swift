@@ -54,6 +54,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARWorldTrackingSessionConfiguration()
         sceneView.session.run(configuration)
     }
+    
     @IBAction func stopRotate(_ sender: Any) {
         if isRotating {
             for planet in allPlanets {

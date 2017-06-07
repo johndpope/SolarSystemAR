@@ -59,8 +59,8 @@ class Planet: SCNNode {
     func createPath() -> SCNNode {
         let torus = SCNTorus(ringRadius: CGFloat(-distanceFromCamera), pipeRadius: 0.005)
         let torusNode = SCNNode(geometry: torus)
-        torusNode.opacity = 1
-        torus.firstMaterial?.diffuse.contents  = UIColor.red
+        torusNode.opacity = 0.7
+        torus.firstMaterial?.diffuse.contents  = UIColor.gray
         torusNode.position = SCNVector3Make(0, 0, 0)
         return torusNode
     }
