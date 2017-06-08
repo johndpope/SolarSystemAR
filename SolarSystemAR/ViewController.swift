@@ -35,18 +35,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             sceneView.scene.rootNode.addChildNode(planet)
             sceneView.scene.rootNode.addChildNode(planet.createPath())
         }
+        saturn.addRing(texture: "2k_saturn_ring+alpha")
     }
     
     func rotate(){
         isRotating = true
-        mercury.animate(withTime: 60)
-        venus.animate(withTime: 100)
-        earth.animate(withTime: 150)
-        mars.animate(withTime: 200)
-        jupiter.animate(withTime: 250)
-        saturn.animate(withTime: 300)
-        uranus.animate(withTime: 350)
-        neptune.animate(withTime: 400)
+        allPlanets.forEach { (planet) in
+            planet.animate()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,9 +53,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func stopRotate(_ sender: Any) {
         if isRotating {
-            for planet in allPlanets {
-               planet.removeAllActions()
-            }
+            allPlanets.forEach({ (planet) in
+                planet.removeAllActions()
+            })
             isRotating = false
         } else {
             rotate()

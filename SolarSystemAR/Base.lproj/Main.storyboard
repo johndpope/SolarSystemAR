@@ -22,7 +22,6 @@
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-8S-QzU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ru2-By-Rgr">
                                 <rect key="frame" x="16" y="629" width="54" height="30"/>
@@ -43,6 +42,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5eO-8S-QzU" secondAttribute="trailing" id="Nlr-yF-vhC"/>
+                            <constraint firstItem="5eO-8S-QzU" firstAttribute="leading" secondItem="P0r-zl-SGw" secondAttribute="leading" id="OXB-mJ-2cQ"/>
+                            <constraint firstItem="r87-2G-Xan" firstAttribute="top" secondItem="5eO-8S-QzU" secondAttribute="bottom" id="n95-uF-h2g"/>
+                            <constraint firstItem="5eO-8S-QzU" firstAttribute="top" secondItem="6sA-BZ-MoU" secondAttribute="bottom" id="pYt-Ga-JTZ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="5eO-8S-QzU" id="1u3-Dg-zRy"/>
